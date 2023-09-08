@@ -28,7 +28,7 @@ const Grid = ({ numOfCards }) => {
     setTurn(true)
     setWinner(null)
     setBoard(Array(numOfCards).fill(""))
-  }
+  } 
   
   return (
     <div className="text-3xl border-2 my-2 border-yellow-300 p-4 flex flex-col justify-center items-center">
@@ -41,7 +41,7 @@ const Grid = ({ numOfCards }) => {
       </h1>
       <div className="h-[500px] w-[500px] flex flex-wrap gap-5  justify-center items-center">
         {board.map((el, i) => (
-          <Card key={i} onPlay={play} player={el} index={i} />
+          <Card key={i} gameEnd={winner ? true : false} onPlay={play} player={el} index={i} />
         ))}
       </div>
       <button onClick={reset} className="bg-blue-200 p-2 rounded-lg text-center ">Reset Game</button>
