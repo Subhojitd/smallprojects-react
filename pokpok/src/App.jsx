@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import Pokidex from './Components/Pokidex/Pokidex'
+import CustomRoutes from './routes/CustomRoutes'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Pokidex/>
+      <CustomRoutes/>
     </>
   )
 }

@@ -4,21 +4,30 @@ import Pokemon from "../Pokemons/Pokemon";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const PokimonList = () => {
-
+  
   // Defining the states
   const [pokimonList, setPokimonList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const POKPOK_URL = "https://pokeapi.co/api/v2/pokemon";
+  const [pokpokUrl,setpokpokUrl] = useState("https://pokeapi.co/api/v2/pokemon");
+
+  const [prevUrl, setPrevUrl] = useState("")
+  const [nextUrl, setnextUrl] = useState("")
+
+  const myprevButtonClass = prevUrl ? "" : "opacity-50";
 
   async function downloadPokemons() {
-    const response = await axios.get(POKPOK_URL);//This downloads 20 pokemons
+    setIsLoading(true)
+    const response = await axios.get(pokpokUrl);//This downloads 20 pokemons
 
     const pokemonresults = response.data.results;//We get the array of pokemons from the results
-
+    setnextUrl(response.data.next)
+    setPrevUrl(response.data.previous)
+    
     // iterating over the array of pokemons, and using their url to download the pokemons from the api
     const pokimonResultPromise = pokemonresults.map((pokemon) =>
       axios.get(pokemon.url)
     );
+    
 
     // passing that promise array  to axios.all 
     const pokemonData = await axios.all(pokimonResultPromise);//array of 20 pokemon detailed data
@@ -43,23 +52,23 @@ const PokimonList = () => {
 
   useEffect(() => {
     downloadPokemons();
-  }, []);
+  }, [pokpokUrl]);
 
   return (
     <>
-      <div className="">
-        <div className="w-full text-2xl text-center my-3 tracking-wide ">-:{" "}Pokemon Collection{" "}:-</div>
+      <div className=" w-full h-full ">
+        <div className="w-full  text-2xl text-center my-3 tracking-wide ">-:{" "}Pokemon Collection{" "}:-</div>
         <div className="flex flex-wrap items-center justify-center mt-8 gap-4 pb-6 border-b-[1px] ">
         {isLoading
           ? "Loading.."
           : pokimonList.map((p) => (
-              <Pokemon name={p.name} image={p.image} key={p.id} />
+              <Pokemon name={p.name} image={p.image} key={p.id} id={p.id} />
             ))}
         </div>
         
         <div className="mt-6 flex items-center justify-center gap-8">
-          <button><ArrowBackIosNewIcon/>Prev</button>
-          <button>Next<ArrowForwardIosIcon/></button>
+          <button onClick={()=>setpokpokUrl(prevUrl)} className={myprevButtonClass}><ArrowBackIosNewIcon/>Prev</button>
+          <button onClick={()=>setpokpokUrl(nextUrl)}>Next<ArrowForwardIosIcon/></button>
         </div>
         
       </div>
