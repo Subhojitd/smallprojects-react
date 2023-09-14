@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
+import usePokemonList from "../../hooks/usePokemonList";
 const PokemonDetails = () => {
   const { id } = useParams();
   const [pokemon, setPokemon] = useState({});
@@ -14,8 +15,9 @@ const PokemonDetails = () => {
       height: response.data.height,
       types: response.data.types.map((t) => t.type.name),
     });
-    console.log(response.data);
-  }
+  } 
+
+const [pokemonListState] = usePokemonList(`https://pokeapi.co/api/v2/type/${pokemon.types ? pokemon.types[0] :'fire' }`,true)
 
   useEffect(() => {
     getPokemodDetails();
@@ -40,6 +42,20 @@ const PokemonDetails = () => {
           </h1>
         </div>
         </div>
+
+
+        {
+          pokemon.types && (
+            <div>
+          <h1>More {pokemon.types[0]} type Pokemons</h1>
+          <ul>
+            {
+            pokemonListState.pokimonList && pokemonListState.pokimonList.map((p)=><li key={p.pokemon.url} >{p.pokemon.name}</li>)
+            }
+          </ul>
+        </div>
+          )
+        }
       </div>
     </>
   );

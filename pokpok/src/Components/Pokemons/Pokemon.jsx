@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Pokemon = ({ name, image,id }) => {
+const Pokemon = ({ name, image, id }) => {
   return (
     <div className="w-[300px] shadow-md cursor-pointer h-[320px] flex flex-col items-center justify-evenly gap-2 border-[1px] rounded-xl ">
       <Link to={`/pokemon/${id}`}>
