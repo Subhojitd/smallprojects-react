@@ -6,7 +6,7 @@ const PokimonList = () => {
 
   
 
-  const [pokemonListState,setPokemonListState] = usePokemonList("https://pokeapi.co/api/v2/pokemon")
+  const [pokemonListState,setPokemonListState] = usePokemonList(false)
 
   const myprevButtonClass = pokemonListState.prevUrl ? "" : "opacity-50";
 
@@ -20,7 +20,7 @@ const PokimonList = () => {
         <div className="flex flex-wrap items-center justify-center mt-8 gap-4 pb-6 border-b-[1px] ">
           {pokemonListState.isLoading
             ? "Loading.."
-            : pokemonListState.pokimonList.map((p) => {
+            : pokemonListState.pokemonList.map((p) => {
                 return (
                   <Pokemon name={p.name} image={p.image} key={p.id} id={p.id} />
                 );
