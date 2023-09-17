@@ -9,7 +9,7 @@ function usePokemonList() {
         nextUrl: '',
         prevUrl: '',
     });
-
+    
     async function downloadPokemons() {
 
             setPokemonListState((state) => ({ ...state, isLoading: true}));
