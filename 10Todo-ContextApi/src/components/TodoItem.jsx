@@ -3,6 +3,7 @@ import { useTodo } from "../contexts";
 import Checkbox from "@mui/material/Checkbox";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
+import { pink } from "@mui/material/colors";
 
 function TodoItem({ todo }) {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
@@ -23,21 +24,29 @@ function TodoItem({ todo }) {
 
   return (
     <div
-      className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
+      className={`flex items-center justify-center border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
         todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
       }`}
     >
-      <Checkbox
-        {...label}
-        icon={<FavoriteBorder />}
-        checkedIcon={<Favorite />}
-        checked={todo.completed}
-        onChange={toggleCompleted}
-      />
+      <div>
+        <Checkbox
+          sx={{
+            color: pink[800],
+            "&.Mui-checked": {
+              color: pink[600],
+            },
+          }}
+          {...label}
+          checked={todo.completed}
+          onChange={toggleCompleted}
+          icon={<FavoriteBorder />}
+          checkedIcon={<Favorite />}
+        />
+      </div>
       <input
         type="text"
-        className={`border outline-none w-full bg-transparent rounded-lg ${
-          isTodoEditable ? "border-black/10 px-2" : "border-transparent"
+        className={`border outline-none w-full bg-transparent rounded-lg text-xl ${
+          isTodoEditable ? "border-black/10 px-2 bg-white" : "border-transparent"
         } ${todo.completed ? "line-through" : ""}`}
         value={todoMsg}
         onChange={(e) => setTodoMsg(e.target.value)}
