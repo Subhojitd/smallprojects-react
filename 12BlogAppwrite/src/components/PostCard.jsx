@@ -1,5 +1,5 @@
 import React from 'react'
-import { appWriteService } from '../appWrite/config'
+import appwriteService  from '../appWrite/config'
 import { Link } from 'react-router-dom'
 
 const PostCard = ({$id, title, featuredImage}) => {
@@ -7,7 +7,7 @@ const PostCard = ({$id, title, featuredImage}) => {
     <Link to={`/post/${$id}`}>
         <div className='w-full bg-gray-100 rounded-xl p-4'>
             <div className='w-full justify-center mb-4'>
-                <img src={appWriteService.getFilePreview(featuredImage)} className='rounded-xl'  alt="" />
+                <img src={appwriteService.getFilePreview(featuredImage)} className='rounded-xl'  alt="" />
             </div>
             <h2 className="text-xl font-bold">{title}</h2>
         </div>
