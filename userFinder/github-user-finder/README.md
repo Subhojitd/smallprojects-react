@@ -2,7 +2,7 @@
 
 GitHub Avatar Fetcher is a simple web application built with React that allows users to input a GitHub username and fetch the user's avatar using the GitHub API with debouncing.
 
-![GitHub Avatar Fetcher Screenshot](./src/assets/screenshot.png.png)
+![GitHub Avatar Fetcher Screenshot](./src/assets/screenshot.png)
 
 ## Features
 
