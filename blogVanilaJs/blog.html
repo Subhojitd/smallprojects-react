@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>PWSkills Blog</h1>
+    </header>
+
+    <div class="blog-post-details" id="blog-details">
+      <!-- Blog post content will be loaded here -->
+    </div>
+
+    <a href="index.html" class="back-button">Back to Home</a>
+
+    <script>
+      // Function to get the value of a query parameter by name
+      function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      // Get the title from the query parameter
+      const blogTitle = getQueryParam("title");
+
+      if (blogTitle) {
+        // Retrieve the blog data for the specified title from Local Storage
+        const blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+        const blog = blogs.find((item) => item.title === blogTitle);
+
+        if (blog) {
+          // Display the blog data on the page
+          const blogDetails = document.getElementById("blog-details");
+          blogDetails.innerHTML = `
+                    <h2>${blog.title}</h2>
+                    <p><strong>Posted by:</strong> ${blog.author}</p>
+                    <img src="${blog.blogImage}" alt="Blog Image">
+                    <p>Description: ${blog.blogDesc}</p>
+                `;
+        } else {
+          // Handle the case where the specified blog title was not found
+          console.error("Blog not found");
+        }
+      } else {
+        // Handle the case where the query parameter is missing
+        console.error("Blog title not provided in query parameter.");
+      }
+    </script>
+  </body>
+</html>

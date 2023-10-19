@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PW Skills Blog</h1>
+      <button id="add-blog">+</button>
+    </header>
+    <div id="blog-list"></div>
+    <div id="add-blog-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2>Add New Blog</h2>
+        <form id="add-blog-form">
+          <label for="blog-title">Title:</label>
+          <input type="text" id="blog-title" required />
+
+          <label for="author">Author:</label>
+          <input type="text" id="author" required />
+
+          <label for="blog-image">Image URL:</label>
+          <input type="text" id="blog-image" />
+
+          <label for="blog-desc">Description:</label>
+          <textarea id="blog-desc" rows="4" required></textarea>
+
+          <button type="submit">Add Blog</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
