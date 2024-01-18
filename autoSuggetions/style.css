@@ -1,0 +1,33 @@
+body {
+  background: #1f305e;
+}
+
+main {
+  width: 500px;
+  margin: 10px auto 0 auto;
+}
+
+#search {
+  padding: 15px;
+  padding-left: 30px;
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  background: #b9d9eb;
+  font-size: large;
+}
+
+#suggetion-area {
+  background: #8ab9f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+  height: 150px;
+  padding: 5px;
+  position: relative;
+  display: none;
+  border-radius: 7px;
+  font-size: large;
+}
