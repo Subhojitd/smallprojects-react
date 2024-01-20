@@ -20,9 +20,11 @@ function App() {
     <DndProvider backend={HTML5Backend}>
       <Toaster />
       <div className="w-screen h-[1000px] bg-slate-900 flex flex-col items-center pt-32 gap-16  text-white">
-        <h1 className="text-4xl -mb-5">Drag & Drop Todo App 📜</h1>
+        <h1 className="text-xl md:text-4xl -mb-5">Drag & Drop Todo App 📜</h1>
         <CreateTask tasks={tasks} setTasks={setTasks} />
-        <ListTasks tasks={tasks} setTasks={setTasks} />
+        <div className="flex flex-col">
+          <ListTasks tasks={tasks} setTasks={setTasks} />
+        </div>
       </div>
     </DndProvider>
   );
