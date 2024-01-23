@@ -1,0 +1,255 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "gender": "Male",
+        "salary": 100
+      },
+      {
+        "id": 2,
+        "gender": "Female",
+        "salary": 200
+      },
+      {
+        "id": 3,
+        "gender": "Robot",
+        "salary": 300
+      },
+      {
+        "id": 4,
+        "gender": "Male",
+        "salary": 150
+      },
+      {
+        "id": 5,
+        "gender": "Female",
+        "salary": 250
+      },
+      {
+        "id": 6,
+        "gender": "Robot",
+        "salary": 350
+      },
+      {
+        "id": 7,
+        "gender": "Male",
+        "salary": 120
+      },
+      {
+        "id": 8,
+        "gender": "Female",
+        "salary": 220
+      },
+      {
+        "id": 9,
+        "gender": "Robot",
+        "salary": 320
+      },
+      {
+        "id": 10,
+        "gender": "Male",
+        "salary": 180
+      },
+      {
+        "id": 11,
+        "gender": "Female",
+        "salary": 280
+      },
+      {
+        "id": 12,
+        "gender": "Robot",
+        "salary": 380
+      },
+      {
+        "id": 13,
+        "gender": "Male",
+        "salary": 130
+      },
+      {
+        "id": 14,
+        "gender": "Female",
+        "salary": 230
+      },
+      {
+        "id": 15,
+        "gender": "Robot",
+        "salary": 330
+      },
+      {
+        "id": 16,
+        "gender": "Male",
+        "salary": 160
+      },
+      {
+        "id": 17,
+        "gender": "Female",
+        "salary": 260
+      },
+      {
+        "id": 18,
+        "gender": "Robot",
+        "salary": 360
+      },
+      {
+        "id": 19,
+        "gender": "Male",
+        "salary": 140
+      },
+      {
+        "id": 20,
+        "gender": "Female",
+        "salary": 240
+      },
+      {
+        "id": 21,
+        "gender": "Robot",
+        "salary": 340
+      },
+      {
+        "id": 22,
+        "gender": "Male",
+        "salary": 170
+      },
+      {
+        "id": 23,
+        "gender": "Female",
+        "salary": 270
+      },
+      {
+        "id": 24,
+        "gender": "Robot",
+        "salary": 370
+      },
+      {
+        "id": 25,
+        "gender": "Male",
+        "salary": 190
+      },
+      {
+        "id": 26,
+        "gender": "Female",
+        "salary": 290
+      },
+      {
+        "id": 27,
+        "gender": "Robot",
+        "salary": 400
+      },
+      {
+        "id": 28,
+        "gender": "Male",
+        "salary": 200
+      },
+      {
+        "id": 29,
+        "gender": "Female",
+        "salary": 310
+      },
+      {
+        "id": 30,
+        "gender": "Robot",
+        "salary": 420
+      },
+      {
+        "id": 31,
+        "gender": "Male",
+        "salary": 210
+      },
+      {
+        "id": 32,
+        "gender": "Female",
+        "salary": 320
+      },
+      {
+        "id": 33,
+        "gender": "Robot",
+        "salary": 430
+      },
+      {
+        "id": 34,
+        "gender": "Male",
+        "salary": 220
+      },
+      {
+        "id": 35,
+        "gender": "Female",
+        "salary": 330
+      },
+      {
+        "id": 36,
+        "gender": "Robot",
+        "salary": 440
+      },
+      {
+        "id": 37,
+        "gender": "Male",
+        "salary": 230
+      },
+      {
+        "id": 38,
+        "gender": "Female",
+        "salary": 340
+      },
+      {
+        "id": 39,
+        "gender": "Robot",
+        "salary": 450
+      },
+      {
+        "id": 40,
+        "gender": "Male",
+        "salary": 240
+      },
+      {
+        "id": 41,
+        "gender": "Female",
+        "salary": 350
+      },
+      {
+        "id": 42,
+        "gender": "Robot",
+        "salary": 460
+      },
+      {
+        "id": 43,
+        "gender": "Male",
+        "salary": 250
+      },
+      {
+        "id": 44,
+        "gender": "Female",
+        "salary": 360
+      },
+      {
+        "id": 45,
+        "gender": "Robot",
+        "salary": 470
+      },
+      {
+        "id": 46,
+        "gender": "Male",
+        "salary": 260
+      },
+      {
+        "id": 47,
+        "gender": "Female",
+        "salary": 370
+      },
+      {
+        "id": 48,
+        "gender": "Robot",
+        "salary": 480
+      },
+      {
+        "id": 49,
+        "gender": "Male",
+        "salary": 270
+      },
+      {
+        "id": 50,
+        "gender": "Female",
+        "salary": 380
+      }
+    ]
+  }
+  
