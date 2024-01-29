@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #9aa9ff; /* Color of the track */
+  border-radius: 6px; /* Rounded corners of the track */
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #9aa9ff; /* Color of the track on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #9aa9ff; /* Color of the scrollbar corner */
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
