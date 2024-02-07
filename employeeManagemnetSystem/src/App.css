@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Define scrollbar colors and styles */
+:root {
+  --scrollbar-thumb-color: #4a5568; /* Thumb color */
+  --scrollbar-track-color: #2d3748; /* Track color */
+}
+
+/* Define scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Define scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color); /* Color of the thumb */
+  border-radius: 6px; /* Border radius of the thumb */
+}
+
+/* Define scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color); /* Color of the track */
+}
+
+/* Define scrollbar for Firefox */
+/* Note: Firefox does not support styling the scrollbar directly. Instead, we use scrollbar-width and scrollbar-color properties */
+/* Define scrollbar width */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
